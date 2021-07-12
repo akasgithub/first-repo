@@ -1,0 +1,35 @@
+.default-button {
+  margin-top: 15px;
+  @include ease;
+
+  &:hover {
+    transform: translateY(-5%);
+  }
+  a {
+    @include ease;
+    text-align: center;
+    padding: 9px 30px;
+    font-size: 20px;
+    position: relative;
+    color: $_color_primary_white;
+    background-color: $_color_accent_orange;
+    @include breakpoint(extrasmall) {
+      font-size: 13px;
+    }
+    &:hover {
+      background-color: $_color_primary_blue;
+      color: $_color_primary_white;
+    }
+  }
+}
+
+.title-button {
+  span {
+    text-align: center;
+    padding: 11px 30px;
+    font-size: 20px;
+    color: $_color_accent_orange;
+    background-color: #ffefec;
+    border-radius: 20px;
+  }
+}

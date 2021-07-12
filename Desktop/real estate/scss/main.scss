@@ -1,0 +1,31 @@
+// abstracts
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/utilities";
+
+// Vendors
+@import "vendors/bootstrap";
+@import "vendors/font-awesome.min";
+@import "vendors/splide.min";
+
+// base
+@import "base/reset";
+@import "base/typography";
+@import "base/fonts";
+
+// layouts
+@import "layouts/header";
+@import "layouts/footer";
+
+// @import "layouts/contact";
+
+// components
+@import "components/buttons";
+@import "components/keyframes";
+
+// pages
+@import "pages/home";
+@import "pages/contact";
+@import "pages/buy";
+@import "pages/team";
+@import "pages/preloader";

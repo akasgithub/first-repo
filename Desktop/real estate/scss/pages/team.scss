@@ -1,0 +1,85 @@
+#about-us {
+  h2 {
+    color: $_color_primary_blue;
+  }
+}
+#team-section {
+  margin-top: 60px;
+  .card {
+    border: none;
+    background: #ffffff;
+  }
+
+  .image-flip:hover .backside,
+  .image-flip.hover .backside {
+    transform: rotateY(0deg);
+    border-radius: 0.25rem;
+  }
+
+  .image-flip:hover .frontside,
+  .image-flip.hover .frontside {
+    transform: rotateY(180deg);
+  }
+
+  .mainflip {
+    transition: 1s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+
+  .frontside {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 30px;
+  }
+
+  .backside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: white;
+    transform: rotateY(-180deg);
+    box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  }
+
+  .frontside,
+  .backside {
+    backface-visibility: hidden;
+    transition: 1s;
+    transform-style: preserve-3d;
+  }
+
+  .frontside .card,
+  .backside .card {
+    min-height: 312px;
+  }
+
+  .backside .card a {
+    font-size: 18px;
+    color: $_color_accent_orange !important;
+  }
+
+  .frontside .card .card-title,
+  .backside .card .card-title {
+    color: $_color_accent_orange !important;
+  }
+
+  .frontside .card .card-body img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
+  .align-center {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: $_color_primary_blue;
+  }
+  .card i {
+    @include ease;
+    &:hover {
+      color: $_color_primary_blue;
+    }
+  }
+}

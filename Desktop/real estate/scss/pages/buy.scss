@@ -1,0 +1,40 @@
+.facilities-section {
+  padding: 120px 0;
+  .facilities-lists {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    .facilities {
+      flex: 0 0 calc(25% - 20px);
+      text-align: center;
+      margin: 10px;
+      box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+      padding: 50px;
+      background: $_color_primary_white;
+      border-radius: 25px;
+
+      @include ease;
+      cursor: pointer;
+      &:hover {
+        background-color: $_color_accent_orange;
+        transform: perspective(1500px) rotateY(15deg);
+      }
+      &:hover span {
+        color: $_color_primary_white;
+      }
+      i {
+        padding: 20px;
+        background: #fef5f4;
+        border-radius: 50px;
+        color: $_color_accent_orange;
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      span {
+        color: $_color_primary_blue;
+        font-weight: bold;
+        @include ease;
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+footer {
+  padding-top: 62px;
+  padding-bottom: 59px;
+  background: #171b2a;
+  color: $_color_primary_white;
+  P {
+    color: $_color_primary_white;
+    line-height: 1.74;
+    letter-spacing: 0.17px;
+  }
+  span {
+    color: $_color_primary_white;
+  }
+  a {
+    color: $_color_primary_white;
+    &:hover {
+      color: $_color_accent_orange;
+    }
+  }
+  h4 {
+    font-size: 25.5px;
+    margin-bottom: 29px;
+  }
+  .first {
+    padding-right: 80px;
+    @include breakpoint(small) {
+      margin-bottom: 60px;
+    }
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+    i {
+      color: $_color_accent_orange;
+    }
+    p {
+      margin-bottom: 31px;
+      margin-top: 30px;
+    }
+    a {
+      font-size: 14px;
+      line-height: 1.74;
+      letter-spacing: 0.17px;
+      position: relative;
+      @include ease;
+      &:hover {
+        color: $_color_accent_orange;
+      }
+    }
+  }
+
+  .col-lg-2 {
+    @include breakpoint(small) {
+      margin-bottom: 60px;
+    }
+    span {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+    a {
+      font-size: 14px;
+      line-height: 1.74;
+      letter-spacing: 0.17px;
+      position: relative;
+      @include ease;
+    }
+  }
+
+  .col-lg-3 {
+    .footer-logo {
+      width: 95px;
+      margin-bottom: 35px;
+    }
+    .social-icons {
+      margin-top: 30px;
+      li {
+        display: inline-block;
+        background: #fff;
+        height: 22px;
+        width: 24px;
+        position: relative;
+        @include ease;
+        cursor: pointer;
+        margin-right: 15px;
+        &:hover {
+          background: $_color_accent_orange;
+        }
+
+        a {
+          color: #000;
+          font-size: 14px;
+          position: absolute;
+          top: 52%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

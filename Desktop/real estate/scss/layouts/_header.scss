@@ -1,0 +1,217 @@
+// top-header
+.top-header {
+  background-color: $_color_primary_blue;
+  padding: 5px 0;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .address {
+      @include breakpoint(small) {
+        flex: 0 0 100%;
+        text-align: center;
+      }
+      span {
+        color: $_color_primary_white;
+        font-size: 14px;
+        padding-right: 30px;
+        a {
+          color: $_color_primary_white;
+          @include ease;
+          &:hover {
+            color: $_color_accent_orange;
+          }
+        }
+        @include breakpoint(small) {
+          font-size: 12px;
+          padding-right: 10px;
+        }
+        i {
+          color: $_color_accent_orange;
+          padding-right: 10px;
+        }
+      }
+    }
+    .social-icons {
+      @include breakpoint(small) {
+        flex: 0 0 100%;
+        text-align: center;
+      }
+      i {
+        color: $_color_primary_white;
+        padding: 10px;
+        @include ease;
+        &:hover {
+          color: $_color_accent_orange;
+        }
+      }
+    }
+  }
+}
+
+// header-section
+.header-section {
+  padding: 15px;
+  box-shadow: 0 1px 8px -2px grey;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      a {
+        color: $_color_primary_blue;
+        font-weight: bolder;
+        font-size: 25px;
+
+        i {
+          color: $_color_accent_orange;
+        }
+      }
+    }
+    .primary-menus {
+      ul {
+        li {
+          display: inline-block;
+          padding-left: 30px;
+
+          a {
+            color: $_color_primary_black;
+            @include ease;
+            &:hover {
+              color: $_color_accent_orange;
+            }
+          }
+        }
+      }
+    }
+    .mobile_menu {
+      display: none;
+      @include breakpoint(wide) {
+        display: block;
+      }
+    }
+  }
+}
+.active {
+  color: $_color_accent_orange !important;
+}
+
+// mobile-menu
+@include breakpoint(wide) {
+  .mobile_menu {
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+    z-index: 9999999;
+    width: 100%;
+    margin-top: -45px;
+    .hamb_lines {
+      float: right;
+      margin-right: 20px;
+      :first-child {
+        width: 40px;
+      }
+      :nth-child(2) {
+        width: 40px;
+      }
+      :nth-child(3) {
+        width: 40px;
+      }
+      :last-child {
+        display: none;
+      }
+      div {
+        height: 1.5px;
+        background: $_color_accent_orange;
+        margin: 0.8rem 0;
+        transition: all 0.2s ease-in-out;
+      }
+      :last-child {
+        display: none;
+      }
+    }
+  }
+  .main-navigation {
+    position: fixed;
+    background-color: $_color_primary_blue;
+    opacity: 0;
+    top: 0%;
+    visibility: hidden;
+    height: 100%;
+    left: 0;
+    width: 0%;
+  }
+}
+
+.responsive_menu {
+  overflow: hidden;
+  .mobile_menu {
+    position: absolute;
+    top: 12%;
+    left: 0%;
+  }
+  .hamb_lines {
+    :first-child {
+      display: none;
+    }
+    :nth-child(2) {
+      transform: rotate(45deg);
+      width: 30px;
+      margin-left: 0;
+      color: $_color_primary_white;
+    }
+    :nth-child(3) {
+      transform: rotate(-45deg);
+      margin-top: -7px;
+      width: 30px;
+      margin-left: 0;
+      color: $_color_primary_white;
+    }
+    :last-child {
+      display: none;
+    }
+    div {
+      margin: 6px 0;
+      background: $_color_primary_white;
+    }
+  }
+  .main-navigation {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+    transition: 0.4s ease-in-out;
+  }
+
+  #primary-menu {
+    visibility: visible;
+    opacity: 1;
+    text-align: center;
+    .primary-menu {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      li {
+        display: block;
+        padding: 20px 0;
+        transition: all 1s;
+      }
+      a {
+        text-transform: uppercase;
+        font-size: 14px !important;
+        color: $_color_primary_white;
+        @include ease;
+        &:hover {
+          color: $_color_accent_orange;
+        }
+      }
+    }
+  }
+}
