@@ -1,0 +1,97 @@
+form {
+  margin-top: 60px;
+  box-shadow: 10px 20px 59px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 90px 54px;
+}
+form .half-form {
+  width: 48%;
+}
+form .half-form-right {
+  margin-left: 4%;
+}
+form input {
+  width: 100%;
+  padding: 10px 0px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+  margin-bottom: 60px;
+}
+
+.form-group-inline {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #757575;
+}
+.form-group-inline label {
+  margin-bottom: 15px;
+}
+.form-group-inline .country {
+  flex: 0 0 31%;
+}
+.form-group-inline .state {
+  flex: 0 0 31%;
+  margin-left: 4%;
+}
+.form-group-inline .zip {
+  flex: 0 0 31%;
+  margin-left: 4%;
+}
+.form-group-inline .form-control {
+  margin-top: 0;
+}
+.form-check {
+  margin-top: 20px;
+}
+.form-check.tick {
+  border-bottom: 1px solid #757575;
+  padding-bottom: 30px;
+}
+.form-check input {
+  padding: 0;
+}
+
+form button {
+  background: #757575;
+  font-size: 21px;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 0;
+  padding: 20px 55px;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  form .half-form {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .form-group-inline .country {
+    flex: 0 0 100%;
+    margin-bottom: 20px;
+  }
+  .form-group-inline .state {
+    flex: 0 0 100%;
+    margin-left: 0%;
+    margin-bottom: 20px;
+  }
+  .form-group-inline .zip {
+    flex: 0 0 100%;
+    margin-left: 0%;
+  }
+  .form-group-inline {
+    flex-wrap: wrap;
+  }
+  form button {
+    font-size: 16px;
+  }
+}

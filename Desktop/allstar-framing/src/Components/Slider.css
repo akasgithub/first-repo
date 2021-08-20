@@ -1,0 +1,69 @@
+.banner {
+  position: relative;
+  height: 100vh;
+}
+/* .banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+} */
+.banner img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.item {
+  height: 100%;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(19, 19, 22, 0.7);
+  width: 100%;
+  padding: 50px 0;
+}
+.banner-content h1 {
+  font-size: 60px;
+  color: #fff;
+}
+.slick-dots {
+  position: absolute !important;
+  bottom: 10% !important;
+}
+.slick-dots button:before {
+  display: block !important;
+  width: 13px !important;
+  height: 13px !important;
+  background: #000 !important;
+  border: none !important;
+  transform: rotate(-45deg) !important;
+  transform-origin: 0 100% !important;
+  font-size: 0px !important;
+  outline: none !important;
+  cursor: pointer;
+  opacity: 1 !important;
+}
+.slick-dots li.slick-active button:before {
+  background-color: #fff !important;
+}
+
+/*  */
+.slick-active img {
+  animation: cssAnimation 3s linear infinite;
+}
+
+@keyframes cssAnimation {
+  from {
+    -webkit-transform: scale(1) translate(0px);
+  }
+  to {
+    -webkit-transform: scale(1.2) translate(0px);
+  }
+}
